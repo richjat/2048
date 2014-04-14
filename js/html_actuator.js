@@ -52,18 +52,18 @@ HTMLActuator.prototype.clearContainer = function (container) {
 
 HTMLActuator.prototype.addTile = function (tile) {
   var valueMap = {
-    2 :    '<Udacity>',
-    4 :    '<Intro CS>',
-    8 :    "skills=['code']",
-    16 :   "skills.add('CSS')",
-    32 :   '</Intro CS>',
-    64 :   '<Job search>',
-    128 :  'getJob(skills)',
-    256 :  '</Job search>',
-    512 :  'if Udacious:',
-    1024 : 'skills.increase()',
-    2048 : 'myJob.advance()',
-    4096 : 'myCareer=myJob'
+    2 :    'D',
+    4 :    'DY',
+    8 :    "DYL",
+    16 :   "DYLA",
+    32 :   'DYLAN',
+    64 :   'DYLAN T',
+    128 :  'DYLAN TU',
+    256 :  'DYLAN TUR',
+    512 :  'DYLAN TURN',
+    1024 : 'DYLAN TURNE',
+    2048 : 'DYLAN TURNER',
+    4096 : 'DYLAN TURNER!'
   }
   var self = this;
 
@@ -166,14 +166,3 @@ HTMLActuator.prototype.clearMessage = function () {
   this.messageContainer.classList.remove("game-over");
 };
 
-HTMLActuator.prototype.scoreTweetButton = function () {
-  var tweet = document.createElement("a");
-  tweet.classList.add("twitter-share-button");
-  tweet.setAttribute("href", "https://twitter.com/share");
-  tweet.textContent = "Tweet";
-
-  var text = "" + this.score + " points in Udacity2048! http://ow.ly/vpoFS Code your own game in their new mini course http://ow.ly/vpaLY #2048game"
-  tweet.setAttribute("data-text", text);
-
-  return tweet;
-};
